@@ -63,4 +63,4 @@ http://localhost/crud/?fn=delete&id=3
 
 # Considerações
 
-Este projeto foi pensado para ser executado localmente, não passou por testes e apresenta interoperabilidade em caso de passagem de parâmetros incorretos, pois não possui tratamento de erros.
+Este projeto foi pensado para ser executado localmente, não passou por testes e apresenta inoperabilidade em caso de passagem de parâmetros incorretos, pois não possui tratamento de erros.
