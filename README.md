@@ -17,7 +17,7 @@ cd C:\xampp\htdocs
 Clone o repositório:
 
 ```
-git clone github.com/Zadislaw/crud
+git clone https://github.com/Zadislaw/crud
 ```
 
 Inicie o Apache e o MySql no Xampp.
