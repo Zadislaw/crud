@@ -78,4 +78,4 @@ http://localhost/crud/?fn=readEmp
 
 # Considerações
 
-Este projeto foi pensado para ser executado localmente, não passou por poucos testes e apresenta inoperabilidade em caso de passagem de parâmetros incorretos, pois não possui tratamento de erros.
+Este projeto foi pensado para ser executado localmente, passou por poucos testes e apresenta inoperabilidade em caso de passagem de parâmetros incorretos, pois não possui tratamento de erros.
