@@ -38,9 +38,9 @@ class Enterprise {
 	public function createEmp() :array
 	{
 			$con = $this->connection();
-			$stmt = $con->prepare("INSERT INTO enterprise VALUES (:_nomeEmp, :_fk_id)");
-			$stmt->bindValue(":_nomeEmp", $this->getNomeEmp(), \PDO::PARAM_STR);
+			$stmt = $con->prepare("INSERT INTO enterprise VALUES (:_fk_id, :_nomeEmp)");
 			$stmt->bindValue(":_fk_id", $this->getFkId(), \PDO::PARAM_INT);
+			$stmt->bindValue(":_nomeEmp", $this->getNomeEmp(), \PDO::PARAM_STR);
 			if ($stmt->execute()) {
 					return $this->readEmp();
 			}
