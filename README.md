@@ -45,7 +45,7 @@ localhost/crud/?fn=read
 
 Digite uma linha parecida com a seguinte em seu navegador para inserir um registro:
 ```
-localhost/crud/?fn=create&nome=Matheus&sobrenome=Costa&dtnascimento=30121999&telefone=2125554444&celular=21955554444&email=matheus@mail.com
+http://localhost/crud/?fn=create&first_name=Matheus&last_name=Costa&dbo=19800101&gender=M&email=matheus@mail.com
 ```
 
 ## Atualizar Profiles:
@@ -53,7 +53,7 @@ localhost/crud/?fn=create&nome=Matheus&sobrenome=Costa&dtnascimento=30121999&tel
 Não esqueça o ID no final.
 Digite algo como:
 ```
-http://localhost/crud/?fn=update&nome=Matheusinho&sobrenome=Araujo&dtnascimento=29121999&telefone=8225554444&celular=82955554444&email=matheusinho@mail.com&id=4
+http://localhost/crud/?fn=update&first_name=Matheusinho&last_name=Araujo&dbo=20000101&gender=M&email=matheusinho@mail.com&id=1
 ```
 
 ## Deletar Profiles:
@@ -61,19 +61,19 @@ http://localhost/crud/?fn=update&nome=Matheusinho&sobrenome=Araujo&dtnascimento=
 
 Digite a função delete com o ID: 
 ```
-http://localhost/crud/?fn=delete&id=3
+http://localhost/crud/?fn=delete&id=2
 ```
 
 ## Cadastrar Reports:
 
 ```
-http://localhost/crud/?fn=createEmp&nomeEmp=PrimeiraReportGRANDE&fk_id=1
+http://localhost/crud/?fn=createReport&titleReport=PrimeiraReportGRANDE&fk_id=1
 ```
 
 ## Ver Reports:
 
 ```
-http://localhost/crud/?fn=readEmp
+http://localhost/crud/?fn=readReport
 ```
 
 # Considerações
