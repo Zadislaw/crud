@@ -33,7 +33,7 @@ Importe o arquivo db_crud.sql para criar o banco de dados.
 
 Você pode utilizar a página [Home](http://localhost/crud/index.html). Ela contém algumas descrições de funcionalidades da API.
 
-## Ler contatos
+## Ler Profiles
 
 Digite:
 ```
@@ -41,14 +41,14 @@ localhost/crud/?fn=read
 ```
 
 
-## Criar Contato
+## Criar Profile
 
 Digite uma linha parecida com a seguinte em seu navegador para inserir um registro:
 ```
 localhost/crud/?fn=create&nome=Matheus&sobrenome=Costa&dtnascimento=30121999&telefone=2125554444&celular=21955554444&email=matheus@mail.com
 ```
 
-## Atualizar contatos:
+## Atualizar Profiles:
 
 Não esqueça o ID no final.
 Digite algo como:
@@ -56,7 +56,7 @@ Digite algo como:
 http://localhost/crud/?fn=update&nome=Matheusinho&sobrenome=Araujo&dtnascimento=29121999&telefone=8225554444&celular=82955554444&email=matheusinho@mail.com&id=4
 ```
 
-## Deletar Contatos:
+## Deletar Profiles:
 
 
 Digite a função delete com o ID: 
@@ -64,13 +64,13 @@ Digite a função delete com o ID:
 http://localhost/crud/?fn=delete&id=3
 ```
 
-## Cadastrar Empresas:
+## Cadastrar Reports:
 
 ```
-http://localhost/crud/?fn=createEmp&nomeEmp=PrimeiraEmpresaGRANDE&fk_id=1
+http://localhost/crud/?fn=createEmp&nomeEmp=PrimeiraReportGRANDE&fk_id=1
 ```
 
-## Ver Empresas:
+## Ver Reports:
 
 ```
 http://localhost/crud/?fn=readEmp

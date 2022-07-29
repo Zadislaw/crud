@@ -32,6 +32,25 @@
   
 </head>
 <body>
+
+    <section data-bs-version="5.1" class="header2 cid-t4OCO6CKGj mbr-fullscreen mbr-parallax-background" id="header2-k">
+
+    
+
+    
+        <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-7">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">Clique para gerar PDF:</h1>
+                    
+                    <p class="mbr-text mbr-fonts-style display-7">localhost/crud/?fn=read</p>
+                    <div class="mbr-section-btn mt-3"><a class="btn btn-success display-2" href="http://localhost/crud/?fn=geraPdf" target="_blank">Veja</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
  
   <section data-bs-version="5.1" class="header2 cid-t4OCO6CKGj mbr-fullscreen mbr-parallax-background" id="header2-k">
 
@@ -43,7 +62,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-7">
-                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">Clique para ver Contatos:</h1>
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">Clique para ver Profiles:</h1>
                 
                 <p class="mbr-text mbr-fonts-style display-7">localhost/crud/?fn=read</p>
                 <div class="mbr-section-btn mt-3"><a class="btn btn-success display-2" href="http://localhost/crud/?fn=read" target="_blank">Veja</a></div>
@@ -57,7 +76,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
-                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=create&nome=Matheus&sobrenome=Costa&dtnascimento=30121999&telefone=2125554444&celular=21955554444&email=matheus@mail.com" target="_blank">Criar Contato</a></div>
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=create&first_name=Matheus&last_name=Costa&dbo=30121999&gender=2125554444&email=matheus@mail.com" target="_blank">Criar Profile</a></div>
             </div>
         </div>
     </div>
@@ -68,7 +87,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
-                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=update&nome=Matheusinho&sobrenome=Araujo&dtnascimento=29121999&telefone=8225554444&celular=82955554444&email=matheusinho@mail.com&id=1" target="_blank">Atualizar Contato</a></div>
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=update&first_name=Matheusinho&last_name=Araujo&dbo=29121999&gender=8225554444&email=matheusinho@mail.com&id=1" target="_blank">Atualizar Profile</a></div>
             </div>
         </div>
     </div>
@@ -79,7 +98,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
-                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=delete&id=2" target="_blank">Deletar Contato</a></div>
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=delete&id=2" target="_blank">Deletar Profile</a></div>
             </div>
         </div>
     </div>
@@ -90,7 +109,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
-                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=createEmp&nomeEmp=PrimeiraEmpresaGRANDE&fk_id=1" target="_blank">Adicionar Empresa</a></div>
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=createReport&titleReport=OutroReportGRANDE&fk_id=1" target="_blank">Adicionar Report</a></div>
             </div>
         </div>
     </div>
@@ -101,7 +120,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 col-lg-10">
-                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=readEmp" target="_blank">Ver Empresas e Seus Funcionários</a></div>
+                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-2" href="http://localhost/crud/?fn=readReport" target="_blank">Ver Reports e Seus Profiles</a></div>
             </div>
         </div>
     </div>
@@ -119,11 +138,11 @@
                     <h3 class="mbr-section-title mbr-fonts-style mb-4 display-5">
                         <strong>Entenda a API</strong></h3>
                 <ul class="list mbr-fonts-style display-7">
-                    <li><strong>Ler Contatos (função read)</strong><br>http://localhost/crud/?fn=read.</li>
-                    <li><strong>Criar Contatos (função create + nome + sobrenome + dtnascimento + telefone + celular + email)</strong><br>http://localhost/crud/?fn=create&amp;nome=Matheus&amp;sobrenome=Costa&amp;dtnascimento=30121999&amp;telefone=2125554444&amp;celular=21955554444&amp;email=matheus@mail.com</li>
-                    <li><strong>Atualizar Contatos (função update + nome + sobrenome + dtnascimento + telefone + celular + email)</strong><br>http://localhost/crud/?fn=update&amp;nome=Matheusinho&amp;sobrenome=Araujo&amp;dtnascimento=29121999&amp;telefone=8225554444&amp;celular=82955554444&amp;email=matheusinho@mail.com&amp;id=1</li>
-                    <li><strong>Deletar Contatos (função delete + id)</strong><br>http://localhost/crud/?fn=delete&amp;id=1</li>
-                    <li><strong>Criar empresa (função createEmp + nomeEmp + id [do contato a ser adicionado])<br></strong>http://localhost/crud/?fn=createEmp&amp;nomeEmp=PrimeiraEmpresaGRANDE&amp;fk_id=1</li><li><strong>Ver empresas (função readEmp + nomeEmp)<br></strong>http://localhost/crud/?fn=readEmp</li>
+                    <li><strong>Ler Profiles (função read)</strong><br>http://localhost/crud/?fn=read.</li>
+                    <li><strong>Criar Profiles (função create + first_name + last_name + dbo + email)</strong><br>http://localhost/crud/?fn=create&amp;first_name=Mary&amp;last_name=Ann&amp;dbo=30121999&amp;gender=F&amp;email=matheus@mail.com</li>
+                    <li><strong>Atualizar Profiles (função update + first_name + last_name + dbo + email)</strong><br>http://localhost/crud/?fn=update&amp;first_name=Matheusinho&amp;last_name=Araujo&amp;dbo=29121999&amp;gender=M&amp;email=matheusinho@mail.com&amp;id=1</li>
+                    <li><strong>Deletar Profiles (função delete + id)</strong><br>http://localhost/crud/?fn=delete&amp;id=1</li>
+                    <li><strong>Criar Report (função createReport + first_nameReport + id [do Report a ser adicionado])<br></strong>http://localhost/crud/?fn=createReport&amp;nameReport=OutroReport&amp;fk_id=1</li><li><strong>Ver Reports (função readReport + titleReport)<br></strong>http://localhost/crud/?fn=readReport</li>
                 </ul>
             </div>
         </div>
@@ -142,8 +161,8 @@
                     <h3 class="mbr-section-title mbr-fonts-style mb-4 display-5">
                         <strong>Outras funcionalidades da API</strong></h3>
                 <ul class="list mbr-fonts-style display-7">
-                    <li><strong>É possível consultar por id da pessoa:</strong><br><span style="font-size: 1.2rem;">http://localhost/crud/?fn=read&amp;id=2</span></li>
-                    <li><strong>É possível consultar empresas pelo id dos contatos:</strong><br>http://localhost/crud/?fn=readEmp&amp;id=5</li>
+                    <li><strong>É possível consultar por id do Profile:</strong><br><span style="font-size: 1.2rem;">http://localhost/crud/?fn=read&amp;id=2</span></li>
+                    <li><strong>É possível consultar Reports pelo id do Report:</strong><br>http://localhost/crud/?fn=readReport&amp;id=5</li>
                 </ul>
             </div>
         </div>

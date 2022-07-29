@@ -1,7 +1,7 @@
 <?php
 
-require_once "Person.php";
-require_once "Enterprise.php";
+require_once "Profile.php";
+require_once "Report.php";
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
@@ -11,67 +11,66 @@ $data = [];
 
 $fn = $_REQUEST["fn"] ?? null;
 $id = $_REQUEST["id"] ?? 0;
-$nome = $_REQUEST["nome"] ?? null;
-$sobrenome = $_REQUEST["sobrenome"] ?? null;
-$dtnascimento = $_REQUEST["dtnascimento"] ?? null;
-$telefone = $_REQUEST["telefone"] ?? null;
-$celular = $_REQUEST["celular"] ?? null;
+$first_name = $_REQUEST["first_name"] ?? null;
+$last_name = $_REQUEST["last_name"] ?? null;
+$dbo = $_REQUEST["dbo"] ?? null;
+$gender = $_REQUEST["gender"] ?? null;
 $email = $_REQUEST["email"] ?? null;
 $fk_id = $_REQUEST["fk_id"] ?? 0;
-$nomeEmp = $_REQUEST["nomeEmp"] ?? null;
+$titleReport = $_REQUEST["titleReport"] ?? null;
 
-$person = new Person;
-$person->setId($id);
+$profile = new Profile;
+$profile->setId($id);
 
-$enterprise = new Enterprise;
-$enterprise->setFkId($fk_id);
+$report = new Report;
+$report->setFkId($fk_id);
 
-if ($fn === "create" && $nome !== null && $sobrenome !== null && $dtnascimento !== null && $telefone !== null && $celular !== null && $email !== null){
-		$person->setNome($nome);
-		$person->setSobrenome($sobrenome);
-		$person->setDtnascimento($dtnascimento);
-		$person->setTelefone($telefone);
-		$person->setCelular($celular);
-		$person->setEmail($email);
-		$data["person"] = $person->create();
+if ($fn === "create" && $first_name !== null && $last_name !== null && $dbo !== null && $gender !== null && $email !== null){
+		$profile->setFirstname($first_name);
+		$profile->setLastname($last_name);
+		$profile->setDbo($dbo);
+		$profile->setGender($gender);
+		$profile->setEmail($email);
+		$data["profile"] = $profile->create();
 
 }
 
 
 if ($fn === "read"){
-		$data["person"] = $person->read();
+		$data["profile"] = $profile->read();
 }
 
 
-if ($fn === "update" && $nome !== null && $sobrenome !== null && $dtnascimento !== null && $telefone !== null && $celular !== null && $email !== null){
-		$person->setNome($nome);
-		$person->setSobrenome($sobrenome);
-		$person->setDtnascimento($dtnascimento);
-		$person->setTelefone($telefone);
-		$person->setCelular($celular);
-		$person->setEmail($email);
-		$data["person"] = $person->update();
+if ($fn === "update" && $first_name !== null && $last_name !== null && $dbo !== null && $gender !== null && $email !== null){
+		$profile->setFirstname($first_name);
+		$profile->setLastname($last_name);
+		$profile->setDbo($dbo);
+		$profile->setGender($gender);
+		$profile->setEmail($email);
+		$data["profile"] = $profile->update();
 
 }
 
 
 if ($fn === "delete" && $id > 0){
-		$data["person"] = $person->delete();
+		$data["profile"] = $profile->delete();
 
 }
 
 
-if ($fn === "createEmp" && $nomeEmp !== null && $fk_id !== null){
-		$enterprise->setNomeEmp($nomeEmp);
-		$enterprise->setFkId($fk_id);
-		$data["enterprise"] = $enterprise->createEmp();
+if ($fn === "createReport" && $titleReport !== null && $fk_id !== null){
+		$report->setReport($titleReport);
+		$report->setFkId($fk_id);
+		$data["report"] = $report->createReport();
 
 }
 
-if ($fn === "readEmp"){
-		$data["enterprise"] = $enterprise->readEmp();
+if ($fn === "readReport"){
+		$data["report"] = $report->readReport();
 }
 
-
+if ($fn === "readReport"){
+	die($profile->geraPdf());
+}
 
 die(json_encode($data));
