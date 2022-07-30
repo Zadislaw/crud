@@ -58,3 +58,11 @@ CREATE TABLE `report` (
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2022-07-29 20:42:12
+INSERT INTO `profile` (`id`,`first_name`, `last_name`, `dbo`, `gender`, `email`)
+VALUES (1,'Ivan', 'Terrible','1990-01-01', 'M', 'ivan@mail.com' ),
+(2,'Victoria', 'Welson','1970-01-01', 'F', 'vic@mail.com' );
+
+
+INSERT INTO `report` (`fk_id`,`title`, `description`)
+VALUES (1, 'First Report', 'Making first grid'),
+(2, 'Second Report', 'This one is special');
