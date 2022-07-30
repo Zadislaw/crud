@@ -165,9 +165,9 @@ class Profile {
 	{
 		$con = $this->connection();
 		$stmt = $con->prepare("SELECT * FROM profile, report");
-		if ($stmt->execute()) {
-			$resultado = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-			}
+		$stmt->execute();
+		$result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
 		
 		$pdf = new FPDF();
 		$pdf->AddPage();
@@ -176,33 +176,35 @@ class Profile {
 		$pdf->ln(15); // espaçamento entra linhas de 15 mm
 		
 		
-		$pdf->SetFont('Arial','B',12);
+		$pdf->SetFont('Arial','B',10);
 		$pdf->Cell(10, 7,'Id',1,0,"C");
 		$pdf->Cell(25, 7,'First Name',1,0,"C");
 		$pdf->Cell(25, 7,'Last Name',1,0,"C");
-		$pdf->Cell(25, 7,'Date of Birth',1,0,"C");
-		$pdf->Cell(25, 7,'Gender',1,0,"C");
-		$pdf->Cell(20, 7,'Email',1,0,"C");
-		$pdf->Cell(25, 7,'Rep. Id',1,0,"C");
+		$pdf->Cell(30, 7,'DOB',1,0,"C");
+		$pdf->Cell(10, 7,'Gen.',1,0,"C");
+		$pdf->Cell(30, 7,'Email',1,0,"C");
+		$pdf->Cell(10, 7,'R Id',1,0,"C");
 		$pdf->Cell(20, 7,'Title',1,0,"C");
-		$pdf->Cell(30, 7,'Description',1,0,"C");
+		$pdf->Cell(35, 7,'Description',1,0,"C");
 		$pdf->ln(); //nenhum espaçamentos entre linhas
 		
 		
-		while ($stmt->fetchAll(\PDO::FETCH_ASSOC)) {
-		
-			$pdf->Cell(70, 7, $resultado['id'],1,0,"C");
-			$pdf->Cell(70, 7, $resultado['first_name'],1,0,"C");
-			$pdf->Cell(70, 7, $resultado['last_name'],1,0,"C");
-			$pdf->Cell(70, 7, $resultado['dbo'],1,0,"C");
-			$pdf->Cell(70, 7, $resultado['gender'],1,0,"C");
-			$pdf->Cell(70, 7, $resultado['email'],1,0,"C");
-			$pdf->Cell(70, 7, $resultado['fk_id'],1,0,"C");
-			$pdf->Cell(70, 7, $resultado['title'],1,0,"C");
-			$pdf->Cell(70, 7, $resultado['description'],1,0,"C");
+		foreach ($result as $resultado) {
+			$pdf->ln(5);
+			$pdf->SetFont('Arial','B',7);
+			$pdf->Cell(10, 7, $resultado['id'],1,0,"C");
+			$pdf->Cell(25, 7, $resultado['first_name'],1,0,"C");
+			$pdf->Cell(25, 7, $resultado['last_name'],1,0,"C");
+			$pdf->Cell(30, 7, $resultado['dbo'],1,0,"C");
+			$pdf->Cell(10, 7, $resultado['gender'],1,0,"C");
+			$pdf->Cell(30, 7, $resultado['email'],1,0,"C");
+			$pdf->Cell(10, 7, $resultado['fk_id'],1,0,"C");
+			$pdf->Cell(20, 7, $resultado['title'],1,0,"C");
+			$pdf->Cell(35, 7, $resultado['description'],1,0,"C");
 			$pdf->Ln();
 			
 		}
+		
 		return $pdf->Output();
 			
 	}

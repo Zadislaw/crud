@@ -39,9 +39,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-7">
-                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">Clique para gerar PDF:</h1>
+                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-2">Clique para gerar o PDF:</h1>
                     
-                    <p class="mbr-text mbr-fonts-style display-7">localhost/crud/?fn=read</p>
+                    <p class="mbr-text mbr-fonts-style display-7">localhost/crud/?fn=geraPdf</p>
                     <div class="mbr-section-btn mt-3"><a class="btn btn-success display-2" href="http://localhost/crud/?fn=geraPdf" target="_blank">Veja</a></div>
                 </div>
             </div>
@@ -132,8 +132,8 @@
                         <strong>Entenda a API</strong></h3>
                 <ul class="list mbr-fonts-style display-7">
                     <li><strong>Ler Profiles (função read)</strong><br>http://localhost/crud/?fn=read.</li>
-                    <li><strong>Criar Profiles (função create + first_name + last_name + dbo + email)</strong><br>http://localhost/crud/?fn=create&amp;first_name=Mary&amp;last_name=Ann&amp;dbo=30121999&amp;gender=F&amp;email=matheus@mail.com</li>
-                    <li><strong>Atualizar Profiles (função update + first_name + last_name + dbo + email)</strong><br>http://localhost/crud/?fn=update&amp;first_name=Matheusinho&amp;last_name=Araujo&amp;dbo=29121999&amp;gender=M&amp;email=matheusinho@mail.com&amp;id=1</li>
+                    <li><strong>Criar Profiles (função create + first_name + last_name + dbo + gender + email)</strong><br>http://localhost/crud/?fn=create&amp;first_name=Mary&amp;last_name=Ann&amp;dbo=30121999&amp;gender=F&amp;email=matheus@mail.com</li>
+                    <li><strong>Atualizar Profiles (função update + first_name + last_name + dbo + gender + email)</strong><br>http://localhost/crud/?fn=update&amp;first_name=Matheusinho&amp;last_name=Araujo&amp;dbo=29121999&amp;gender=M&amp;email=matheusinho@mail.com&amp;id=1</li>
                     <li><strong>Deletar Profiles (função delete + id)</strong><br>http://localhost/crud/?fn=delete&amp;id=1</li>
                     <li><strong>Criar Report (função createReport + first_nameReport + id [do Report a ser adicionado])<br></strong>http://localhost/crud/?fn=createReport&amp;nameReport=OutroReport&amp;fk_id=1</li><li><strong>Ver Reports (função readReport + titleReport)<br></strong>http://localhost/crud/?fn=readReport</li>
                 </ul>
