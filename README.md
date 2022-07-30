@@ -24,6 +24,8 @@ Inicie o Apache e o MySql no Xampp.
 
 Clique no botão Admin do MySql.
 
+Crie um banco de dados com o nome "db_crud" (Dá pra usar várias collations, mas prefira a "utf8mb4_general_ci")
+
 Importe o arquivo db_crud.sql para criar o banco de dados.
 
 
