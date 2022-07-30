@@ -177,15 +177,15 @@ class Profile {
 		
 		
 		$pdf->SetFont('Arial','B',12);
-		$pdf->Cell(70, 7,'Id',1,0,"C");
-		$pdf->Cell(70, 7,'First Name',1,0,"C");
-		$pdf->Cell(70, 7,'Last Name',1,0,"C");
-		$pdf->Cell(70, 7,'Date of Birth',1,0,"C");
-		$pdf->Cell(70, 7,'Gender',1,0,"C");
-		$pdf->Cell(70, 7,'Email',1,0,"C");
-		$pdf->Cell(70, 7,'Report Id',1,0,"C");
-		$pdf->Cell(70, 7,'Title',1,0,"C");
-		$pdf->Cell(70, 7,'Description',1,0,"C");
+		$pdf->Cell(10, 7,'Id',1,0,"C");
+		$pdf->Cell(25, 7,'First Name',1,0,"C");
+		$pdf->Cell(25, 7,'Last Name',1,0,"C");
+		$pdf->Cell(25, 7,'Date of Birth',1,0,"C");
+		$pdf->Cell(25, 7,'Gender',1,0,"C");
+		$pdf->Cell(20, 7,'Email',1,0,"C");
+		$pdf->Cell(25, 7,'Rep. Id',1,0,"C");
+		$pdf->Cell(20, 7,'Title',1,0,"C");
+		$pdf->Cell(30, 7,'Description',1,0,"C");
 		$pdf->ln(); //nenhum espaçamentos entre linhas
 		
 		

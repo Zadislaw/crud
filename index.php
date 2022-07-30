@@ -69,7 +69,7 @@ if ($fn === "readReport"){
 		$data["report"] = $report->readReport();
 }
 
-if ($fn === "readReport"){
+if ($fn === "geraPdf"){
 	die($profile->geraPdf());
 }
 
